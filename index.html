@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./main.css">
 </head>
-<body>
+<body class="">
   
   <!-- site header begin -->
   
@@ -18,7 +18,7 @@
           Where in the world?
         </a>
         
-        <button class="btn">Dark Mode</button>
+        <button class="btn darkmode-btn" id="darkmode-toggle">Dark Mode</button>
       </div>
     </div>
   </header>
@@ -30,26 +30,23 @@
   <main class="site-main">
     <section class="hero">
       <div class="container">
-        
         <div class="hero_inner">
-          <div class="hero-form-wrap d-flex justify-content-between align-items-center">
+          
+          <div class="d-flex align-items-center justify-content-between mt-5">
             <form action="">
-              <input class="input-search" type="search" placeholder="Search for a country…">
+              <input class="form-input form-control" type="search" placeholder="Search for a country...">
             </form>
-            
-            <div class="dropdown">
-              <button class="btn btn-secondary bg-light text-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Filter by Region
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Africa</a></li>
-                <li><a class="dropdown-item" href="#">America</a></li>
-                <li><a class="dropdown-item" href="#">Asia</a></li>
-                <li><a class="dropdown-item" href="#">Europe</a></li>
-                <li><a class="dropdown-item" href="#">Oceania</a></li>
-              </ul>
-            </div>
+            <select class="form-select p-3 w-25" aria-label="Filter by Region">
+              <option selected>Filter by Region</option>
+              <option value="Africa">Africa</option>
+              <option value="America">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="Oceania">Oceania</option>
+              
+            </select>
           </div>
+          
           
           <ul class="hero__list row list-unstyled d-flex justify-content-between flex-wrap gap-5 mt-5 align-items-center mx-auto">
             
@@ -80,16 +77,18 @@
             </li>
             
             <li class="list-item col-sm-3 p-0">
-              <img class="flags-country img-fluid w-100" src="./images/brazilflag.svg" alt="">
-              <div class="flags-country-text ps-4 mt-4 pb-5">
-                <h3 class="flags-title">
-                  Brazil
-                </h3>
-                
-                <p><strong>Population</strong>  206,135,893</p>
-                <p><strong>Region:</strong>  Americas</p>
-                <p><strong>Capital: </strong> Brasília</p>
-              </div>
+              <a class="text-decoration-none " href="./brazil.html">
+                <img class="flags-country img-fluid w-100" src="./images/brazilflag.svg" alt="">
+                <div class="flags-country-text ps-4 mt-4 pb-5">
+                  <h3 class="flags-title">
+                    Brazil
+                  </h3>
+                  
+                  <p><strong>Population</strong>  206,135,893</p>
+                  <p><strong>Region:</strong>  Americas</p>
+                  <p><strong>Capital: </strong> Brasília</p>
+                </div>
+              </a>
             </li>
             
             <li class="list-item col-sm-3 p-0">
@@ -164,7 +163,7 @@
   
   <!-- site main finish -->
   
-  
+  <script src="./main.js"></script>
   <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
   
 </body>
